@@ -1,16 +1,65 @@
-# Claude Code - Proyecto de Desarrollo
+# Claude Code Alternative - Proyecto de Desarrollo
 
-Este proyecto está configurado para usar Claude Code con GitHub Codespaces.
+Este proyecto contiene **scripts alternativos** a Claude Code que funcionan en **entornos corporativos** sin restricciones OAuth.
 
-## Contenido
-- `instrucciones.ini` - Archivo de configuraciones
-- `claude-cursor-code/` - Directorio para desarrollo con Claude Code
+## 🎯 Problema Resuelto
 
-## Uso con Claude Code
+Claude Code oficial requiere OAuth que está **bloqueado en redes corporativas**. Nuestros scripts usan la **API directa de Anthropic** sin restricciones.
 
-1. Abrir este repositorio en GitHub Codespaces
-2. Instalar Claude Code: `npm install -g @anthropic-ai/claude-code`
-3. Ejecutar: `claude`
+## 📁 Contenido
 
-## Autor
-AlphK 
+- `claude_api_direct.py` - Chat general con Claude
+- `claude_code_assistant.py` - **Especialista en programación** 
+- `instrucciones.ini` - Configuraciones del proyecto
+
+## 🚀 Instalación y Uso
+
+### 1. Instalar dependencias:
+```bash
+pip install requests anthropic
+```
+
+### 2. Configurar API Key:
+```powershell
+# Obtén tu API key en: https://console.anthropic.com/
+$env:ANTHROPIC_API_KEY = "sk-ant-api03-tu-clave-aqui"
+```
+
+### 3. Usar los scripts:
+
+#### Chat General:
+```bash
+python claude_api_direct.py
+```
+
+#### Asistente de Programación:
+```bash
+python claude_code_assistant.py
+```
+
+## 🔧 Comandos del Code Assistant
+
+- `analyze` - Analizar proyecto actual
+- `read <archivo>` - Leer contenido de archivo  
+- `debug <problema>` - Ayuda con depuración
+- `review <archivo>` - Revisión de código
+- `exit` - Salir
+
+## ✅ Ventajas vs Claude Code Oficial
+
+| Claude Code Oficial | Nuestros Scripts |
+|---|---|
+| ❌ Requiere OAuth | ✅ API key directa |
+| ❌ Bloqueado corporativo | ✅ Solo HTTPS estándar |
+| ❌ No acepta sk-proj- keys | ✅ Cualquier API key válida |
+| ❌ Validaciones especiales | ✅ API estándar |
+
+## 🏢 Ideal para Entornos Corporativos
+
+- **Sin bloqueos de red**
+- **Sin OAuth**
+- **Funciona con proxy corporativo**
+- **API key estándar de Anthropic**
+
+## 👨‍💻 Autor
+ABoldCode (al.bold83@gmail.com) 
